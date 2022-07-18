@@ -61,7 +61,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              MyButton(buttonText: 'Login', backgroundColor: Color(0xff69F0AE),),
+              MyButton(buttonText: 'Login', backgroundColor: Color(0xff69F0AE),
+                onPressed: () {   Navigator.of(context).pushNamed('/homepage_screen');
+                },),
               SizedBox(height: 50,),
               Row(
                 children: <Widget>[
@@ -72,6 +74,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
                     ),
                     onPressed: () {
+                      Navigator.of(context).pushNamed('/signup_screen');
+
                       //signup screen
                     },
                   ),

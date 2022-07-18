@@ -17,9 +17,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(debugShowCheckedModeBanner: false,
       title: 'Vedansh-Test APP',
       theme: ThemeData.light(),
-      initialRoute: 'home_page',
+      initialRoute: '/',
       routes: {
-        'home_page': (context)=> HomeScreen(),
+        '/': (context)=>  WelcomeScreen(),
+        '/login_screen': (context)=> LoginScreen(),
+        '/signup_screen': (context)=> SignupScreen(),
+        '/homepage_screen': (context)=> HomeScreen(),
       },
     );
   }

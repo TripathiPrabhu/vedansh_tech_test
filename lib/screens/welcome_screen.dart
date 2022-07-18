@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vedansh_tech_test/helpers/MyButton.dart';
+import 'package:vedansh_tech_test/screens/signUp_screen.dart';
+
+import 'login-screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -21,7 +24,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               padding: const EdgeInsets.all(10),
               child: ListView(
                 children: <Widget>[
-    SizedBox(height: 50,),
+                  SizedBox(
+                    height: 50,
+                  ),
                   Container(
                       alignment: Alignment.center,
                       padding: const EdgeInsets.all(10),
@@ -42,8 +47,22 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     ),
                   ),
                   Image(image: AssetImage('images/welcomeimage.jpg')),
-                  MyButton(buttonText: 'Login', backgroundColor: Colors.white,),
-                  MyButton(buttonText: 'Sign up', backgroundColor: Colors.white,),
+                  MyButton(
+                    buttonText: 'Login',
+                    backgroundColor: Colors.white,
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/login_screen');
+
+                    },
+                  ),
+                  MyButton(
+                    buttonText: 'Sign up',
+                    backgroundColor: Colors.white,
+                    onPressed: () {
+                      //Navigator.pushNamed(context, '/signup_screen');
+                      Navigator.of(context).pushNamed('/signup_screen');
+                    },
+                  ),
                 ],
               )),
         ));

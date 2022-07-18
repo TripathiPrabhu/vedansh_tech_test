@@ -74,7 +74,8 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                 ),
-                MyButton(buttonText: 'Sign up', backgroundColor: Color(0xff69F0AE),),
+                MyButton(buttonText: 'Sign up', backgroundColor: Color(0xff69F0AE),
+                  onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignupScreen()));  },),
                 SizedBox(height: 50,),
                 Row(
                   children: <Widget>[
@@ -85,7 +86,8 @@ class _SignupScreenState extends State<SignupScreen> {
                         style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
                       ),
                       onPressed: () {
-                        //signup screen
+                        Navigator.of(context).pushNamed('/login_screen');
+
                       },
                     ),
                   ],
